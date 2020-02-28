@@ -1,7 +1,49 @@
+/* 对首页等父元素的字体图标进行设置 */
+.iconfont{
+    margin-right: 8px;
+}
+
+/* 对文章管理和个人中心里面的子元素的字体图标进行设置 */
+.layui-icon{
+    margin: 0 10px 0 10px;
+}
+/* 添加iframe标签 */
 .layui-body iframe{
     width: 100%;
     height: 100%;
 }
 .layui-body {
     overflow: hidden;
+}
+/* 底部文字的对齐 */
+.layui-footer{
+    text-align: center;
+}
+/* 头像区域的处理 */
+.user-pic{
+    padding: 20px 0;
+    text-align: center;
+   
+}
+.Ut{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: skyblue;
+    vertical-align: bottom;
+   
+}
+.assets{
+    vertical-align: middle;
+    text-align: center;
+    margin-right: 0px;
+}
+.userLogin{
+    color: #fff;
+    font-size: 14px;
 }

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>狸米班主任管理</title>
     <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 引入字体图标的css文件 -->
+    <link rel="stylesheet" href="/assets/fonts/iconfont.css">
     <link rel="stylesheet" href="/assets/css/index.css">
 </head>
 
@@ -29,39 +31,52 @@
             </ul>
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
-                    <a href="javascript:;">
+                    <a href="javascript:;" class="user_text">
                         <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                        贤心
+                        <span class="Ut assets">A</span>
+                        <span>个人中心</span>
                     </a>
+
                     <dl class="layui-nav-child">
                         <dd><a href="">基本资料</a></dd>
                         <dd><a href="">安全设置</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="">退了</a></li>
+                <li class="layui-nav-item"><a class="exit" href="Javascript:;">退出</a></li>
             </ul>
         </div>
 
         <div class="layui-side layui-bg-black">
             <div class="layui-side-scroll">
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <!-- 添加头像的区域 -->
+                <li class="layui-nav-item  user-pic">
+                    <a href="javascript:;" class="user_text">
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                        <span class="Ut"></span>
+                        <span class="userLogin">欢迎&nbsp;&nbsp;xxx</span>
+                    </a>
+
+                </li>
+                <!-- 左侧垂直导航栏的区域开始了 -->
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all" lay-filter="test">
-                    <li class="layui-nav-item layui-this"><a href="">首页</a></li>
+                    <li class="layui-nav-item layui-this"><a href="/home/dashboard.html" target="fm"><span
+                                class="iconfont icon-home"></span>首页</a></li>
                     <li class="layui-nav-item">
-                        <a class="" href="javascript:;">所有商品</a>
+                        <a class="" href="javascript:;"><span class="iconfont icon-16"></span>文章管理</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;">列表一</a></dd>
-                            <dd><a href="javascript:;">列表二</a></dd>
-                            <dd><a href="javascript:;">列表三</a></dd>
-                            <dd><a href="">超链接</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon">&#xe653;</i>文章类别</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon">&#xe653;</i>文章列表</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon">&#xe653;</i>发表文章</a></dd>
+
                         </dl>
                     </li>
                     <li class="layui-nav-item">
-                        <a href="javascript:;">解决方案</a>
+                        <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;">列表一</a></dd>
-                            <dd><a href="javascript:;">列表二</a></dd>
-                            <dd><a href="">超链接</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon">&#xe653;</i> 基本资料</a></dd>
+                            <dd><a href="javascript:;"><i class="layui-icon">&#xe653;</i>更换头像</a></dd>
+                            <dd><a href=""><i class="layui-icon">&#xe653;</i>重置密码</a></dd>
                         </dl>
                     </li>
                 </ul>
@@ -70,18 +85,21 @@
 
         <div class="layui-body">
             <!-- 内容主体区域 -->
+            <!-- 添加iframe标签 -->
             <iframe name="fm" src="/home/dashboard.html" frameborder="0"></iframe>
         </div>
 
         <div class="layui-footer">
             <!-- 底部固定区域 -->
-            © layui.com - 底部固定区域
+            © limishuxue.com - 北京狸米科技有限公司
         </div>
     </div>
     <!-- 导入layui的js文件 -->
     <script src="/assets/lib/layui/layui.all.js"></script>
     <!-- 导入jquery的文件 -->
     <script src="/assets/lib/jquery.js"></script>
+    <!-- 导入ajax的过滤器 -->
+    <script src="/assets/js/baseAPI.js"></script>
     <!-- 导入自己的js文件 -->
     <script src="/assets/js/index.js"></script>
 </body>
