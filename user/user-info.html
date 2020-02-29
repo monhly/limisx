@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入layui的css文件 -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 引入自己手写的css文件 -->
+    <link rel="stylesheet" href="/assets/css/user.css/user-info.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">修改用户新息</div>
+        <div class="layui-card-body">
+            <form class="layui-form userForm" lay-filter="f1" action="">
+                <!-- 获取id的区域 -->
+                <!-- 此处使用了隐藏域 -->
+                <input type="hidden" name="id">
+                <!-- 用户名的区域 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="username" readonly required lay-verify="required|pass"
+                            placeholder="请输入标题" autocomplete="off" class="layui-input uName">
+                    </div>
+                </div>
+                <!-- 用户昵称的区域 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户昵称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="nickname" required lay-verify="required|pass|username"
+                            placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <!-- 登录邮箱区域 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">登录邮箱</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="email" required lay-verify="required|email|" placeholder="请输入标题"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <!-- 登录和重置的区域 -->
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+        </div>
+
+
+
+        </form>
+    </div>
+    <!-- 导入layui的js文件 -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 导入jquery的文件 -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 导入ajax的过滤器 -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- 导入自己的js文件 -->
+    <script src="/assets/js/user.js/user-info.js"></script>
+</body>
+
+</html>

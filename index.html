@@ -74,9 +74,13 @@
                     <li class="layui-nav-item">
                         <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;"><i class="layui-icon">&#xe653;</i> 基本资料</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon">&#xe653;</i>更换头像</a></dd>
-                            <dd><a href=""><i class="layui-icon">&#xe653;</i>重置密码</a></dd>
+                            <dd><a href="/user/user-info.html" target="fm"><i class="layui-icon">&#xe653;</i>
+                                    基本资料</a>
+                            </dd>
+                            <dd><a href="/user/user-img.html" target="fm"><i class="layui-icon">&#xe653;</i>更换头像</a>
+                            </dd>
+                            <dd><a href="/user/user-reset.html" target="fm"><i class="layui-icon">&#xe653;</i>重置密码</a>
+                            </dd>
                         </dl>
                     </li>
                 </ul>
@@ -87,6 +91,7 @@
             <!-- 内容主体区域 -->
             <!-- 添加iframe标签 -->
             <iframe name="fm" src="/home/dashboard.html" frameborder="0"></iframe>
+            <!-- <iframe name="user" src="/user/user-info.html" frameborder="0"></iframe> -->
         </div>
 
         <div class="layui-footer">

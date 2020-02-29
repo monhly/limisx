@@ -1,0 +1,10 @@
+body{
+    background-color: #ccc;
+    padding: 15px;
+}
+/* 设置form表单的宽度 */
+.layui-form{
+    width: 400px;
+    padding: 20px;
+
+}
