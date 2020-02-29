@@ -1,0 +1,15 @@
+body{
+    background-color: #ccc;
+    padding: 20px;
+}
+.layui-card-body{
+    padding: 20px;
+}
+.layui-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calss{
+    padding: 15px;
+}
