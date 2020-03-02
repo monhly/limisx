@@ -84,22 +84,57 @@ $(function () {
             , count: data //数据总数，从服务端得到,
             , limit: obj.pagesize //每页显示的页数,
             // , curr: obj.pagenum
-            , limits: [2, 5, 10]
+            , limits: [2, 5, 10],
+            curr: obj.pagenum
             , layout: ['prev', 'page', 'next', 'skip', 'count', 'limit'],
-            jump: function (obj, first) {
+            jump: function (obj1, first) {
                 //obj包含了当前分页的所有参数，比如：
 
-                obj.pagenum = obj.curr
+                obj.pagenum = obj1.curr
                 //得到当前页，以便向服务端请求对应页的数据。
 
+
+                // 获取最新的条目数，并且设置给 q.pagesize
+                obj.pagesize = obj1.limit
 
                 //首次不执行
                 if (!first) {
                     //do something
+                    // 根据当前页获取当前页的数据
+                    list()
+
                 }
             }
         });
     }
+    // 绑定删除
+    $('tbody').on('click', '.delete', function () {
+        // 发送数据请求,获取所在id的数据
+        var id = $(this).data('id');
+        console.log(id);
 
+        $.ajax({
+            type: 'GET',
+            url: '/my/article/deletecate/' + id,
+            success: function (res) {
+                if (res.status !== 0) {
+                    return layer.msg(res.message)
+                }
+                layer.confirm('确定要删除吗', { icon: 3, title: '提示' }, function (index) {
+                    //do something
+                    // 关闭弹出层
+                    layer.close(index)
+                    // 进行数据的渲染
+                    list()
+                    layer.msg(res.message)
+                });
+            }
+        })
+
+
+
+
+
+    })
 
 })
